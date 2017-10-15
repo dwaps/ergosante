@@ -1,0 +1,16 @@
+.bowerrc
+.editorconfig
+.idea/
+.io-config.json
+A FAIRE
+dwaps.keystore
+scss/
+www/js
+www/send_form_by_mail.php
+www/css
+www/templates
+www/lib
+platforms/
+node_modules/
+plugins/
+hooks/

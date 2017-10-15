@@ -1,0 +1,84 @@
+<!--
+  -- Auteur : 	DWAPS - Michael Cornillon
+  -- Client :	Ergosanté
+  -- Mail : 	contact@dwaps.fr
+  -- Tel :		0651279211
+  -- Site : 	dwaps.fr
+  -- Date : 	13/11/2015
+  -->
+
+  <!-- DECOMMENTEE LIEN CGU (footer) POUR APP WEB -->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+		<meta property="og:title" content="Formulaire Ergosanté">
+		<meta property="og:type" content="formulaire, entreprise, ergosante, ergonomie, medecin du travail, professionnel, sante, amelioration">
+		<meta name="description" content="Formulaire Ergosanté">
+		<meta property="og:url" content="http://ergosante.fr/">
+
+		<meta http-equiv="X-Frame-Options" content="deny">
+		<meta http-equiv="X-Content-Security-Policy" content="allow self">
+
+		<meta name="author" content="DWAPS Formation - Michael Cornillon">
+		<meta http-equiv="Content-Language" content="fr-FR">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	      <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>Formulaire Ergosanté</title>
+
+        <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+        <script src="js/angular-ios9-uiwebview.js"></script>
+        <script src="cordova.js"></script>
+
+        <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="lib/animate.css/animate.min.css" rel="stylesheet">
+
+        <script src="js/app.js"></script>
+        <script src="js/routes.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/services.js"></script>
+  </head>
+
+
+  <body ng-app="app" animation="slide-left-right-ios7">
+
+          <ion-header-bar align-title="left">
+              <div class="buttons">
+                  <i class="button-icon icon ion-ios-home-outline ergoGreen animated" ng-show="btsLeft" ng-style="styleBtHome" ng-click="toHome()">
+                  </i>
+                  <i class="button-icon icon ion-ios-rewind-outline ergoGreen animated" ng-show="btsLeft" ng-style="styleBtPrev" ng-click="loadUrl(false)">
+                  </i>
+              </div>
+
+              <h1 class="title" ng-cloak="">{{ title }}</h1>
+
+
+              <div class="buttons">
+                  <i class="button-icon icon ion-ios-fastforward-outline ergoGreen" ng-style="styleBtNext" ng-click="loadUrl(true)">
+                  </i>
+                  <button ng-click="sendForm()" class="button bt-envoyer">
+                      Envoyer
+                      <!--class=" icon ion-ios-upload-outline ergoGreen"-->
+                  </button>
+              </div>
+          </ion-header-bar>
+
+          <ion-nav-view></ion-nav-view>
+
+          <div class="bar bar-footer hide-on-keyboard-open" ng-hide="byDwaps">
+              <div class="title title-footer">
+                  Créée par <a href="http://dwaps.fr" target="_blank">DWAPS<sup>®</sup></a>
+                  
+                  <a href="http://ergosante.fr/app/cgu.html" target="_blank" ng-show="isAppWeb">
+                    CGU
+                  </a>
+                   
+              </div>
+          </div>
+  </body>
+</html>
